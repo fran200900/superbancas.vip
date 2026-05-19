@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Super Bancas | Loterias, Milhar, Centena e Premiações
+    </title>
+
+    <meta
+      name="description"
+      content="A Super Bancas oferece cotações diferenciadas para milhar, centena, dezena e grupo, além de bônus exclusivos e plataforma simplificada para loterias."
+    />
+
+    <meta
+      name="keywords"
+      content="super bancas, loteria, milhar, centena, dezena, grupo, banca de loteria, cotação da milhar, bônus loteria, jogo do bicho"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://superbancas.com.br/" />
+
+    <!-- OPEN GRAPH -->
+    <meta
+      property="og:title"
+      content="Super Bancas | Loterias e Bônus Exclusivos"
+    />
+
+    <meta
+      property="og:description"
+      content="Ganhe bônus, aproveite altas cotações e jogue nas melhores bancas do Brasil."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://superbancas.com.br/" />
+
+    <!-- SCHEMA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Super Bancas",
+        "url": "https://superbancas.com.br",
+        "logo": "https://superbancas.com.br/logo.png"
+      }
+    </script>
+
+    <style>
+      :root {
+        --primary: #facc15;
+        --secondary: #0f172a;
+        --dark: #020617;
+        --light: #f8fafc;
+        --blue: #1e3a8a;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #020617;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      /* HEADER */
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: rgba(2, 6, 23, 0.95);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--primary);
+      }
+
+      .menu {
+        display: flex;
+        gap: 25px;
+      }
+
+      .menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .menu a:hover {
+        color: var(--primary);
+      }
+
+      /* HERO */
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background:
+          linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.8)),
+          url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1974&auto=format&fit=crop')
+          center/cover;
+
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 64px;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        color: var(--primary);
+      }
+
+      .hero p {
+        font-size: 22px;
+        max-width: 850px;
+        margin: auto;
+        color: #e2e8f0;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 35px;
+        background: linear-gradient(45deg, #facc15, #f59e0b);
+        color: #000;
+        padding: 16px 35px;
+        border-radius: 12px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+          0 10px 25px rgba(250, 204, 21, 0.4);
+      }
+
+      /* SECTIONS */
+
+      section {
+        padding: 90px 0;
+      }
+
+      h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--primary);
+      }
+
+      .section-text {
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+        color: #cbd5e1;
+        font-size: 18px;
+      }
+
+      /* GRID */
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        margin-top: 50px;
+      }
+
+      /* CARDS */
+
+      .card {
+        background:
+          linear-gradient(
+            180deg,
+            #0f172a,
+            #111827
+          );
+
+        border-radius: 18px;
+        padding: 35px;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+
+        border-color:
+          rgba(250,204,21,0.5);
+      }
+
+      .card h3 {
+        font-size: 28px;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        font-size: 20px;
+        color: white;
+      }
+
+      /* BONUS */
+
+      .bonus {
+        background:
+          linear-gradient(
+            135deg,
+            #1e3a8a,
+            #020617
+          );
+      }
+
+      /* BANCAS */
+
+      .bancas-grid {
+        margin-top: 50px;
+      }
+
+      .banca-link {
+        text-decoration: none;
+        color: white;
+
+        transition: 0.35s;
+
+        position: relative;
+        overflow: hidden;
+
+        min-height: 280px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background:
+          linear-gradient(
+            180deg,
+            rgba(15,23,42,1),
+            rgba(2,6,23,1)
+          );
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+      }
+
+      .banca-link:hover {
+        transform:
+          translateY(-8px)
+          scale(1.02);
+
+        border-color:
+          rgba(250,204,21,0.7);
+
+        box-shadow:
+          0 15px 40px rgba(250,204,21,0.18),
+          0 0 25px rgba(250,204,21,0.12);
+      }
+
+      .banca-link::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: -120%;
+
+        width: 100%;
+        height: 100%;
+
+        background:
+          linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.08),
+            transparent
+          );
+
+        transition: 0.8s;
+      }
+
+      .banca-link:hover::before {
+        left: 120%;
+      }
+
+      .banca-link h3 {
+        font-size: 32px;
+        color: #facc15;
+        margin-bottom: 15px;
+      }
+
+      .banca-link p {
+        color: #cbd5e1;
+        line-height: 1.6;
+        font-size: 17px;
+      }
+
+      .banca-btn {
+        margin-top: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background:
+          linear-gradient(
+            45deg,
+            #facc15,
+            #f59e0b
+          );
+
+        color: #000;
+
+        font-weight: bold;
+        font-size: 16px;
+
+        padding: 15px 20px;
+
+        border-radius: 12px;
+
+        transition: 0.3s;
+      }
+
+      .banca-link:hover .banca-btn {
+        transform: scale(1.03);
+      }
+
+      /* IFRAME */
+
+      .iframe-wrapper {
+        margin-top: 40px;
+
+        border-radius: 24px;
+
+        overflow: hidden;
+
+        border:
+          1px solid rgba(255,255,255,0.08);
+
+        box-shadow:
+          0 20px 60px rgba(0,0,0,0.4);
+      }
+
+      .iframe-section iframe {
+        width: 100%;
+        height: 850px;
+        border: none;
+        background: #fff;
+      }
+
+      .iframe-buttons {
+        margin-top: 25px;
+
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .iframe-buttons button,
+      .iframe-buttons a {
+        background:
+          linear-gradient(
+            45deg,
+            #facc15,
+            #f59e0b
+          );
+
+        color: #000;
+
+        padding: 14px 28px;
+
+        border-radius: 12px;
+
+        border: none;
+
+        font-weight: bold;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+      }
+
+      .iframe-buttons button:hover,
+      .iframe-buttons a:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+          0 10px 25px rgba(250,204,21,0.4);
+      }
+
+      /* FAQ */
+
+      .faq-item {
+        margin-bottom: 30px;
+      }
+
+      .faq-item h3 {
+        color: var(--primary);
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .faq-item p {
+        color: #cbd5e1;
+      }
+
+      /* FOOTER */
+
+      footer {
+        padding: 40px 20px;
+        text-align: center;
+        background: #010409;
+
+        border-top:
+          1px solid rgba(255,255,255,0.08);
+      }
+
+      footer p {
+        color: #94a3b8;
+      }
+
+      /* RESPONSIVO */
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 42px;
+        }
+
+        .hero p {
+          font-size: 18px;
+        }
+
+        .menu {
+          display: none;
+        }
+
+        h2 {
+          font-size: 34px;
+        }
+
+        .iframe-section iframe {
+          height: 650px;
+        }
+
+        .banca-link {
+          min-height: auto;
+        }
+
+        .banca-link h3 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+
+    <header>
+      <div class="container">
+
+        <nav>
+
+          <div class="logo">
+            SUPER BANCAS
+          </div>
+
+          <div class="menu">
+            <a href="#cotacoes">Cotações</a>
+            <a href="#bonus">Bônus</a>
+            <a href="#bancas">Bancas</a>
+            <a href="#faq">FAQ</a>
+          </div>
+
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+
+        <h1>
+          As Melhores do Brasil<br />
+          Numa Só Banca
+        </h1>
+
+        <p>
+          A Super Bancas reúne as melhores bancas apoiadoras,
+          oferecendo cotação diferenciada, bônus exclusivos,
+          pagamentos rápidos e plataforma simplificada para loterias.
+        </p>
+
+        <a
+          href="https://app.superbancas.club/pr/3IMRdWnG"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          RESGATAR BÔNUS
+        </a>
+
+      </div>
+    </section>
+
+    <!-- COTAÇÕES -->
+
+    <section id="cotacoes">
+      <div class="container">
+
+        <h2>
+          Cotação Oficial da Super Bancas
+        </h2>
+
+        <div class="grid">
+
+          <div class="card">
+            <h3>Milhar</h3>
+            <p>R$ 9.600,00</p>
+          </div>
+
+          <div class="card">
+            <h3>Centena</h3>
+            <p>R$ 960,00</p>
+          </div>
+
+          <div class="card">
+            <h3>Dezena</h3>
+            <p>R$ 96,00</p>
+          </div>
+
+          <div class="card">
+            <h3>Grupo</h3>
+            <p>R$ 24,00</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BONUS -->
+
+    <section class="bonus" id="bonus">
+      <div class="container">
+
+        <h2>
+          Ganhe R$ 10,00 Extra
+        </h2>
+
+        <p class="section-text">
+          Deposite acima de R$ 50,00 e receba
+          R$ 10,00 extras para jogar nas loterias.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- BANCAS -->
+
+    <section id="bancas">
+      <div class="container">
+
+        <h2>
+          Bancas Apoiadoras
+        </h2>
+
+        <div class="grid bancas-grid">
+
+          <a
+            href="https://bancaaguiaoficial.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card banca-link"
+          >
+            <h3>Águia Oficial</h3>
+
+            <p>
+              Tradição, segurança e as melhores
+              cotações para você.
+            </p>
+
+            <span class="banca-btn">
+              ACESSAR AGORA
+            </span>
+          </a>
+
+          <a
+            href="https://app.acertos.club/pr/JcsF2PpU"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card banca-link"
+          >
+            <h3>Acertos Club</h3>
+
+            <p>
+              Confiança e agilidade para
+              a sua melhor experiência.
+            </p>
+
+            <span class="banca-btn">
+              ACESSAR AGORA
+            </span>
+          </a>
+
+          <a
+            href="https://vaidarboa.vip/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card banca-link"
+          >
+            <h3>Vaidarboa</h3>
+
+            <p>
+              A banca que mais cresce
+              e mais paga no Brasil.
+            </p>
+
+            <span class="banca-btn">
+              ACESSAR AGORA
+            </span>
+          </a>
+
+          <a
+            href="https://app.superbancas.club/pr/3IMRdWnG"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card banca-link"
+          >
+            <h3>Super Bancas</h3>
+
+            <p>
+              A maior união de bancas
+              para você ganhar mais.
+            </p>
+
+            <span class="banca-btn">
+              ACESSAR AGORA
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- IFRAME INTERATIVO -->
+
+    <section class="iframe-section">
+      <div class="container">
+
+        <h2>
+          Plataforma Oficial
+        </h2>
+
+        <p class="section-text">
+          Acesse agora a plataforma oficial da Super Bancas.
+        </p>
+
+        <div class="iframe-wrapper">
+
+          <iframe
+            id="superbancas-frame"
+            loading="lazy"
+            src="https://app.superbancas.club/pr/3IMRdWnG"
+            title="Super Bancas Plataforma"
+
+            allow="
+              clipboard-read;
+              clipboard-write;
+              fullscreen;
+              autoplay;
+              payment;
+              geolocation;
+              microphone;
+              camera;
+              display-capture;
+            "
+
+            allowfullscreen
+
+            sandbox="
+              allow-same-origin
+              allow-scripts
+              allow-popups
+              allow-forms
+              allow-downloads
+              allow-modals
+              allow-presentation
+              allow-top-navigation-by-user-activation
+            "
+
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+
+        </div>
+
+        <div class="iframe-buttons">
+
+          <button id="reload-frame">
+            Recarregar Plataforma
+          </button>
+
+          <a
+            href="https://app.superbancas.club/pr/3IMRdWnG"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir em Nova Aba
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section id="faq">
+      <div class="container">
+
+        <h2>
+          Perguntas Frequentes
+        </h2>
+
+        <div class="faq-item">
+          <h3>
+            Como funciona o bônus?
+          </h3>
+
+          <p>
+            Ao realizar a primeira recarga acima de R$ 50,00,
+            o usuário recebe R$ 10,00 extras.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            O pagamento é rápido?
+          </h3>
+
+          <p>
+            Sim. A plataforma possui pagamentos ágeis
+            e sistema simplificado.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>
+        © 2026 Super Bancas - Todos os direitos reservados
+      </p>
+    </footer>
+
+    <script>
+      const iframe =
+        document.getElementById(
+          'superbancas-frame'
+        );
+
+      const reloadBtn =
+        document.getElementById(
+          'reload-frame'
+        );
+
+      reloadBtn.addEventListener(
+        'click',
+        () => {
+          iframe.src = iframe.src;
+        }
+      );
+    </script>
+
+  </body>
+</html>
